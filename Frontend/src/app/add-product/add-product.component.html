@@ -1,0 +1,41 @@
+
+<input type="file" name="productImage" placeholder="ProductImage" (change)="onChange($event)">
+<button class="btn btn-success" (click)="upload()">Submit</button>
+
+
+
+<div class="productList">
+  <tr>
+    <th>imagename</th>
+    <th>ProductImage</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.productImage}}</td>
+    <td><img src="../../assets/{{product.productImage}}" width="300"></td>
+  </tr>
+</div>
+<!-- <form>
+  <input type="text" name="productName" placeholder="ProductName" [(ngModel)]="product.productName"><br><br>
+  <input type="file" name="productImage" placeholder="ProductImage" [(ngModel)]="product.productImage"><br><br>
+
+  <input type="text" name="productPrice" placeholder="ProductPrice" [(ngModel)]="product.productPrice"><br><br>
+  <input type="text" name="productDescription" placeholder="ProductDescription"
+    [(ngModel)]="product.productDescription"><br><br>
+
+  <select id='peeps' name='people' [(ngModel)]="product.productCategory">
+    <option *ngFor="let item of categoryList" [value]="item.categoryName">
+      {{item.categoryName}}
+    </option>
+  </select><br><br>
+  <button class="btn btn-success" (click)="onSelected()">Submit</button>
+</form>
+<div class="productList">
+  <tr>
+    <th>productName</th>
+    <th>ProductImage</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.productName}}</td>
+    <td>{{product.productImage}}</td>
+  </tr>
+</div> -->

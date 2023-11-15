@@ -1,0 +1,10 @@
+<div class="login">
+    <h3>Login Page</h3>
+    <p [hidden]="!showmsg">Login Successful</p>
+    <p [hidden]="!showerror">Email or Password is Incorrect</p>
+    <form (ngSubmit)="onLogin()">
+        <input type="email" name="Email" placeholder="Email" [(ngModel)]="userObj.userEmail"><br><br>
+        <input type="password" name="Password" placeholder="Password" [(ngModel)]="userObj.userPassword"><br><br>
+        <button class="btn btn-primary">Login</button>
+    </form>
+</div>

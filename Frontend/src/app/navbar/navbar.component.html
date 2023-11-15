@@ -1,0 +1,19 @@
+<div class="topnav">
+    <!-- <a *ngIf="!isUserLoggedIn() && !isSellerLoggedIn() && !isAdminLoggedIn()" [routerLink]="'/adminSignup'">AdminSignup|</a> -->
+    <a *ngIf="!isUserLoggedIn() && !isSellerLoggedIn() && !isAdminLoggedIn()" [routerLink]="'/adminlogin'">AdminLogin|</a>
+    <a *ngIf="!isUserLoggedIn() && !isSellerLoggedIn() && !isAdminLoggedIn()" [routerLink]="'/login'">LogIn|</a>
+    <a *ngIf="!isUserLoggedIn() && !isSellerLoggedIn() && !isAdminLoggedIn()" [routerLink]="'/sellerSignup'">SellerSignUp|</a>
+    <a *ngIf="!isUserLoggedIn() && !isSellerLoggedIn() && !isAdminLoggedIn()" [routerLink]="'/sellerLogin'">SellerLogIn|</a>
+    <a [routerLink]="'/contact'">ContactUs</a>|
+    <a [routerLink]="'/about'">AboutUs</a>|
+    <a *ngIf="isUserLoggedIn()" [routerLink]="'/viewProductByUser'">View Product|</a>
+    <a *ngIf="isUserLoggedIn()" (click)="userLogout()">Logout|</a>
+    <a *ngIf="isSellerLoggedIn() && IsSellerStatus()" [routerLink]="'/addProduct'">Add product|</a>
+    <a *ngIf="isSellerLoggedIn()" (click)="sellerLogout()">Logout</a>
+    <a *ngIf="isAdminLoggedIn()" [routerLink]="'/addcategory'">Add Category|</a>
+    <a *ngIf="isAdminLoggedIn()" [routerLink]="'/sellerDetails'">SellerDetails|</a>
+    <a *ngIf="isAdminLoggedIn()" (click)="adminLogout()">Logout</a>
+    
+    <hr>
+    
+</div>

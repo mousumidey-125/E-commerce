@@ -1,0 +1,23 @@
+<div>
+<p>add-category </p>
+<p [hidden]="!showmsg">New Category Added Successfully</p>
+    <p [hidden]="!showerror">Category already exists </p>
+<input type="text" name="category" placeholder="Category" [(ngModel)]="categoryObj.categoryName">
+<button class="btn btn-danger" (click)="addCategory()">Add</button>
+</div>
+
+<div class="category">
+    <p>All Categories</p>
+    <table>
+        <tr>
+            <th>serial no</th>
+            <th>Categiry name</th>
+        </tr>
+        <p [hidden]="!categoryNotadded">No category added</p>
+        <tr *ngFor="let categoryObj of categoryList,index as i">
+            <td>{{i+1}}</td>
+            <td>{{categoryObj.categoryName}}</td>
+
+        </tr>
+    </table>
+</div>

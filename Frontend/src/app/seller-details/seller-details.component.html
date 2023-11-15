@@ -1,0 +1,33 @@
+<div>
+    <p>seller-details </p>
+    <table>
+        <tr>
+            <th>sellerName</th>
+            <th>sellerEmail</th>
+            <th>sellerPhone</th>
+            <th>sellerBrandName</th>
+            <th>sellerAddress</th>
+            <th>status</th>
+        </tr>
+        <tr *ngFor="let seller of sellerList,index as i">
+            <td>{{i+1}}</td>
+            <td>{{seller.sellerName}}</td>
+            <td>{{seller.sellerEmail}}</td>
+            <td>{{seller.sellerPhone}}</td>
+            <td>{{seller.sellerBrandName}}</td>
+            <td>{{seller.sellerAddress}}</td>
+            <td>
+                <button (click)="changeStatus(i+1)" [ngStyle]="{'background-color': seller.status === true ? 'green' : 'red'}">{{ seller.status === true ? 'Active' : 'Inactive' }}</button>
+            <div *ngIf="showPopup[i+1]">
+                <P>Do you want to change the status?</P>
+                <button (click)="ok(seller,i+1)">OK</button>
+                <button (click)="cancel(seller,i+1)">Cancel</button>
+            </div>
+            </td>
+        
+        </tr>
+        
+    </table>
+</div>
+
+

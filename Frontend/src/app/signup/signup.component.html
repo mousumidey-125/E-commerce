@@ -1,0 +1,13 @@
+<div class="signup">
+    <h3>SignUp Page</h3>
+    <p [hidden]="!showmsg">Registration Successful</p>
+    <p [hidden]="!showerror">Email or Phone already exists </p>
+    <form (ngSubmit)="onSubmit()">
+        <input type="text" name="UserName" placeholder="UserName" [(ngModel)]="userObj.userName"><br><br>
+        <input type="email" name="Email" placeholder="Email" [(ngModel)]="userObj.userEmail"><br><br>
+        <input type="text" name="Phone" placeholder="Phone" [(ngModel)]="userObj.userPhone"><br><br>
+        <input type="password" name="Password" placeholder="Password" [(ngModel)]="userObj.userPassword"><br><br>
+        <input type="text" name="Address" placeholder="Address" [(ngModel)]="userObj.userAddress"><br><br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
